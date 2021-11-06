@@ -1,0 +1,94 @@
+﻿@model FikrGroupCms.Models.ViewModel
+@{
+    ViewBag.Title = "Works";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+<div class="title_internal_page" style="background:#FFF !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 content-head style2 text-center col-lg-offset-2 col-lg-8 col-md-12">
+                <h2>works</h2>
+                <h1>Our works</h1>
+                @*<p>Polygon is the brilliant high techno WordPress theme. You will not.
+            *@</div>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="folio-main-content">
+        <ul class="folio-main-filter list-inline" data-option-key="filter">
+            <li><a class="active" href="#filter" data-option-value="*">All</a></li>
+            @foreach (var item in Model.TypeTB)
+            {
+                <li><a href="#" data-option-value=".@item.Id" class="">@item.Type</a></li>
+            }
+            @*<li><a href="#" data-option-value=".animation" class="">Mobile  Application</a></li>
+            <li><a href="#" data-option-value=".branding" class="">Branding</a></li>
+            <li><a href="#" data-option-value=".webdesign" class="">Web Design</a></li>*@
+        </ul>
+        <div class="folio-main-grid folio-main-4col" style="position: relative; height: 1745.31px;">
+            <!-- PORTFOLIO ITEM -->
+            @foreach (var item in Model.ProductsTB.Take(8).ToList())
+            {
+                <div class="filter-animation folio-main-item @item.TypeId" style="position: absolute; left: 436px; top: 436px;">
+                    <a href="@item.Image" class="prettyPhoto">
+                        <div class="folio-wrapper">
+                            <img src="@item.Image" class="img-responsive " alt="" style="height:300px !important">
+                            <div class="folio-overlay">
+                                <div class="folio-overlay-inner icons_aa">
+                                    @if (item.Link != null && item.Link != "")
+                                    {
+                                        <a href="@item.Link" title="">
+                                            <img src="/images/grid-world.png" alt="">
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@item.Link" title="" style="display:none">
+                                            <img src="/images/grid-world.png" alt="">
+                                        </a>
+                                    }
+                                    @if (item.AndroidLink != null && item.AndroidLink != "")
+                                    {
+                                        <a href="@item.AndroidLink" title="">
+                                            <img src="/images/android.png" alt="">
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@item.AndroidLink" title="" style="display:none">
+                                            <img src="/images/android.png" alt="">
+                                        </a>
+                                    }
+                                    @if (item.IosLink != null && item.IosLink != "")
+                                    {
+                                        <a href="@item.IosLink" title="">
+                                            <img src="/images/apple.png" alt="">
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@item.IosLink" title="" style="display:none">
+                                            <img src="/images/apple.png" alt="">
+                                        </a>
+                                    }
+                                </div>
+                                <span class="btn_m_d">
+                                    <a href="@item.Image" class="  prettyPhoto"><b> @item.EnTitle </b></a>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+
+        </div>
+
+
+    </div>
+</div>
+<!-- **************** blue ***************** -->
+<div class="cta-blue">
+</div>
+

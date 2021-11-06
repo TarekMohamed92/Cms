@@ -1,0 +1,98 @@
+﻿@model FikrGroupCms.Models.ViewModel
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+        <!-- title_page -->
+<div class="title_internal_page" style="background:#FFF !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 content-head style2 text-center col-lg-offset-2 col-lg-8 col-md-12">
+                <h2>blog</h2>
+                <h1>latest news</h1>
+                @*<p>Polygon is the brilliant high techno WordPress theme. You will not.
+            *@</div>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="postcontent-type03">
+                @{
+                    string xdat = "col-md-push-6";
+                    string xdat2 = "col-md-pull-6";
+                    foreach (var item in Model.NewsTB.OrderByDescending(x => x.Id))
+                    {
+                        <article class="post type-post blog-entry">
+                            <div class="recent-posts__item row">
+                                <div class="recent-posts__thumb col-md-6 @xdat">
+                                    <a href="/Home/NewsDetails?id=@item.Id">
+                                        <img src="@item.Image" class="img-responsive" alt="" style="height:300px;width:500px;">
+                                    </a>
+                                </div>
+                                <div class="recent-posts-desc col-md-6 @xdat2">
+                                    <div class="dates">
+                                        <span class="date">@item.Date.Value.ToString("dd")</span>
+                                        <span class="month">@item.Date.Value.ToString("MMM")</span>
+                                        <span class="year">@item.Date.Value.ToString("yyyy")</span>
+                                    </div>
+                                    <div class="post-meta">
+                                        @*<span class="post-com">
+                                                <i class="fa fa-folder-open"></i> <a href="./blog.html">Anything</a>, <a href="./blog.html">Business</a>
+                                            </span>*@
+                                        <span class="author">
+                                            <i class="fa fa-user"></i> admin
+                                        </span>
+                                    </div>
+                                    <h4><a href="/Home/NewsDetails?id=@item.Id">@item.EnTitle</a></h4>
+                                    <div class="blog-entry-excerpt">
+                                        <p>@Html.Raw(item.EnDescription)</p>
+                                    </div>
+                                    <a class="bttn" href="/Home/NewsDetails?id=@item.Id">Read more</a>
+                                </div>
+                            </div>
+                        </article>
+                        xdat = xdat == "" ? "col-md-push-6" : "";
+                        xdat2 = xdat2 == "" ? "col-md-pull-6" : "";
+                    }
+                }
+                @*<article class="post type-post blog-entry">
+                        <div class="recent-posts__item row">
+                            <div class="recent-posts__thumb col-md-6 col-md-push-6">
+                                <a href="./blog-single-standard.html">
+                                    <img src="/images/blog/2.jpg" class="img-responsive" alt="">
+                                </a>
+                            </div>
+                            <div class="recent-posts-desc col-md-6 col-md-pull-6">
+                                <div class="dates">
+                                    <span class="date">09</span>
+                                    <span class="month">Sep</span>
+                                    <span class="year">2015</span>
+                                </div>
+                                <div class="post-meta">
+                                    <span class="post-com">
+                                        <i class="fa fa-folder-open"></i> <a href="./blog.html">Anything</a>, <a href="./blog.html">Business</a>
+                                    </span>
+                                    <span class="author">
+                                        <i class="fa fa-user"></i> admin
+                                    </span>
+                                </div>
+                                <h4><a href="./blog-single-standard.html">How To Choose The Best Theme For My Business?</a></h4>
+                                <div class="blog-entry-excerpt">
+                                    <p>Building a beautiful website for your business begins with choosing a theme - a design that controls page layout, widget areas, and default style. Selecting Polygon is your best choice for this.</p>
+                                </div>
+                                <a class="bttn" href="details_blog.html">Read more</a>
+                            </div>
+                        </div>
+                    </article>*@
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- **************** blue ***************** -->
+<div class="cta-blue">
+</div>
+

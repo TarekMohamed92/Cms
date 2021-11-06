@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel" style="margin-top:20%">
+    <div class="panel-body">
+        <div class="panel-update-content">
+            <div class="row-revenue clearfix">
+                <div class="col-md-6 text-center">
+                    <h5>المشاريع</h5>
+                    <h1><i class="fa fa-archive"></i> @ViewBag.dt1</h1>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h5>الفاعليات</h5>
+                    <h1><i class="fa fa-rss"></i> @ViewBag.dt2</h1>
+                </div>
+                @*<div class="col-md-4 text-center">
+                    <h5>ارقامنا</h5>
+                    <h1><i class="fa fa-hashtag "></i> @ViewBag.dt3</h1>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+

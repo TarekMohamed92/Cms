@@ -1,0 +1,472 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="Personality.Index" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>الجمعية الخيريه للتضامن الاجتماعي</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/font-awesome//css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/prettyphoto.css">
+    <link rel="stylesheet" href="/css/pe-icon-7-stroke//css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="/js/vendors/slick/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Revslider CSS -->
+    <link rel='stylesheet' href="/js/revolution//css/settings.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution//css/layers.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution//css/navigation.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution//css/settings2.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution//css/settings3.css" type="text/css">
+    <!-- Video BG -->
+    <link rel='stylesheet' href="/css/ytplayer.css" type="text/css">
+    <!-- ========= RTL VERSION ========= -->
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="/css/rtl.css">
+    <link href="/css/droid-arabic-kufi.css" rel="stylesheet" />
+    <style>
+        .owl-buttons {
+            direction: rtl !important;
+        }
+
+        .copyright {
+            background: #e74c3c;
+        }
+
+        span {
+            letter-spacing: 0px !important;
+        }
+
+        :not(i):not(span) {
+            letter-spacing: 0px !important;
+            font-family: 'DroidArabicKufiBold' !important;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .site-top {
+            background: #2ecc71 !important;
+        }
+
+            .site-top .top-has-link *[class*="pe-7s"], .site-top .fa {
+                color: #FFF;
+            }
+
+        .textwidget {
+            color: #FFF;
+        }
+
+        #site-navigation .menu > ul > li a, #site-navigation .menu > li a {
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        .snap-drawer-left {
+            z-index: -200;
+        }
+
+        .tp-bgimg.defaultimg {
+            background-size: 100% 100% !important;
+        }
+
+        .snap-drawer-left {
+            z-index: -200 !important;
+            background: #FFF !important;
+        }
+
+        @media (min-width: 576px) {
+        }
+
+        @media (min-width: 768px) {
+        }
+
+        @media (min-width: 992px) {
+            .snap-drawer-left {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .snap-drawer-left {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+<body class="header-sticky">
+    <!-- ****************** MOBILE MENU ******************* -->
+    <div class="snap-drawers" style="z-index: 0 !important">
+        <div class="snap-drawer snap-drawer-left">
+            <div class="mobile-menu">
+                <ul id="mobile-menu" class="menu">
+                    <li class="menu-item menu-item-has-children">
+                        <a href="Index.aspx" onclick="window.open($(this).attr('href'),'_self');">الرئيسية</a>
+
+                    </li>
+                    <li class="menu-item menu-item-has-children mega-menu">
+                        <a href="gallery.aspx" onclick="window.open($(this).attr('href'),'_self');">الصور والفيديوهات</a>
+
+                    </li>
+                    <li class="menu-item menu-item-has-children mega-menu">
+                        <a href="projects.aspx" onclick="window.open($(this).attr('href'),'_self');">المشاريع</a>
+
+                    </li>
+                    <li class="menu-item menu-item-has-children mega-menu">
+                        <a href="budget.aspx" onclick="window.open($(this).attr('href'),'_self');">الميزانيات</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children mega-menu">
+                        <a href="News.aspx" onclick="window.open($(this).attr('href'),'_self');">الفاعليات</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="About.aspx" onclick="window.open($(this).attr('href'),'_self');">من نحن</a>
+
+                    </li>
+                    <li class="menu-item menu-item-has-children mega-menu">
+                        <a href="Contact.aspx" onclick="window.open($(this).attr('href'),'_self');">اتصل بنا</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // END MOBILE MENU -->
+
+
+
+    <div class="wrapper" id="wrapper">
+        <!-- ****************** HEADER ******************* -->
+        <div class="site-top hidden-xs hidden-sm">
+            <div class="container container-full">
+                <div class="row middle">
+                    <div class="col-md-7 top-has-link">
+                        <aside id="text-5" class="widget top-left widget_text">
+                            <div class="textwidget">
+                                <i class="pe-7s-phone"></i>جوال: <span id="contactPhone2" runat="server"></span>&nbsp;&nbsp; &nbsp; &nbsp;
+                                <i class="pe-7s-mail-open"></i><span id="contactMail2" runat="server"></span>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pull-right">
+                            <!--<div class="mini-cart pull-left">
+                                <div class="mini-cart__button" title="View your shopping cart">
+                                    <span class="mini-cart-icon akshfsd"
+                                          data-count="0"></span>
+                                </div>
+                                <div class="widget_shopping_cart_content">
+                                    <ul class="cart_list product_list_widget ">
+                                        <li class="empty">No products in the cart.</li>
+                                    </ul>
+
+                                </div>
+                                <span class="title-cart">My cart</span>
+                            </div>-->
+                            <div class="social-menu top-has-link pull-left">
+                                <ul class="menu-social-small">
+                                    <asp:ListView ID="lstSocial2" runat="server">
+                                        <ItemTemplate>
+                                            <li><a href="<%#Eval("Link") %>"><i class="fa <%#Eval("Icon") %>"></i></a></li>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <header>
+            <div class="container container-full">
+                <div class="row">
+                    <div class="col-md-2 col-xs-10 logo">
+                        <a href="./index.html">
+                            <img src="images/logo.png" alt="" style='margin-top: -20px' /></a>
+                    </div>
+                    <div class="col-xs-2 hidden-md hidden-lg" onclick="callx();">
+                        <i id="open-left" class="fa fa-navicon"></i>
+                    </div>
+                    <div class="col-md-10 hidden-xs hidden-sm">
+                        <nav id="site-navigation" class="main-navigation hidden-xs hidden-sm">
+                            <div>
+                                <div class="search-cart hidden-xs hidden-sm pull-right">
+                                    <!--<div class="search-box">
+                                        <form class="search-form">
+                                            <label>
+                                                <span class="screen-reader-text">Search for:</span>
+                                                <input type="search" class="search-field" placeholder="Search ..." value="">
+                                            </label>
+                                            <input type="submit" class="search-submit" value="Search">
+                                        </form>
+                                        <i class="pe-7s-search"></i>
+                                    </div>-->
+                                </div>
+                                <div class="search-cart hidden-xs hidden-sm pull-right">
+                                    <!--<div class="mini-cart">
+                                        <div class="mini-cart__button" title="View your shopping cart">
+                                            <span class="mini-cart-icon"
+                                                  data-count="0"></span>
+                                        </div>
+                                        <div class="widget_shopping_cart_content">
+                                            <ul class="cart_list product_list_widget ">
+                                                <li class="empty">No products in the cart.</li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class="primary-menu pull-right">
+                                    <ul id="primary-menu" class="menu">
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="Index.aspx">الرئيسية</a>
+
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="gallery.aspx">الصور و الفيديوهات</a>
+
+                                        </li>
+                                        <li class="menu-item menu-item-has-children mega-menu">
+                                            <a href="projects.aspx">المشاريع</a>
+
+                                        </li>
+                                        <li class="menu-item menu-item-has-children mega-menu">
+                                            <a href="budget.aspx">الميزانيات</a>
+
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="News.aspx">الفعاليات</a>
+
+                                        </li>
+                                        <li class="menu-item menu-item-has-children mega-menu">
+                                            <a href="About.aspx">من نحن</a>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children mega-menu">
+                                            <a href="Contact.aspx">اتصل بنا</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- // HEADER -->
+        <form runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <!-- CALL TO ACTION -->
+    <div class="cta-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+                    <a class="bttn skin-white" href="#" onclick="return openModal(this);" data-text="">تبرع الان</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ****************** FOOTER ******************* -->
+    <footer style="z-index: 1 !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-8">
+                    <div class="footer-widget">
+                        <p>الجمعية الخيريه للتضامن الاجتماعي</p>
+                        <p id="topDesc" runat="server">
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8">
+                    <div class="footer-widget footer-contact">
+                        <h5>اتصل بنا</h5>
+                        <p><span class="pe-7s-call"></span><b id="contactPhone" runat="server"></b></p>
+                        <p><span class="pe-7s-mail-open-file"></span><b id="contactMail" runat="server"></b></p>
+                        <p><span class="pe-7s-map-2"></span><b id="contactAddress" runat="server"></b></p>
+                        <%--<p><span class="pe-7s-print"></span>(61 2) 9200 5700</p>--%>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8">
+                    <div class="footer-widget">
+                        <h5>احدث الصور</h5>
+                        <ul class="fprojects">
+                            <asp:ListView ID="lstGallary" runat="server">
+                                <ItemTemplate>
+                                    <li>
+                                        <div>
+                                            <a href="<%#Eval("Image") %>" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="<%#Eval("Image") %>" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:ListView>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="col-md-3 col-sm-6">
+                        <div class="footer-widget">
+                            <h5>News</h5>
+                            <ul class="fnews">
+                                <li>
+                                    <a href="./blog.html">اخر</a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html">How To Choose The Best Theme For My Business?</a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html">What make a brand success?</a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html">New design trends</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>-->
+            </div>
+        </div>
+    </footer>
+    <!-- // FOOTER -->
+
+    <!-- **************** COPYRIGHT ***************** -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-5 left">
+                    <ul class="menu-social-small">
+                        <asp:ListView ID="lstSocial" runat="server">
+                            <ItemTemplate>
+                                <li><a href="<%#Eval("Link") %>"><i class="fa <%#Eval("Icon") %>"></i></a></li>
+                            </ItemTemplate>
+                        </asp:ListView>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-7 right" style="color: #FFF">
+                    &copy; جميع الحقوق محفوظه لدي الاوائل 2019
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="donate-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تبرع الان</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span class="modal-title-hidden" style="display:none;">0</span>
+                    <p>يرجي ادخال مبلغ التبرع بالدينار الكويتي </p>
+                    <p>
+                        <input class="form-control" id="txtDonate" type="number" value="0" />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" style="margin-top: 10px;" class="btn btn-success" onclick="openDonate(this); return false;">تاكيد </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a class="scrollup" title="Go to top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Javascript -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/js/vendors/easypie/jquery.easypiechart.min.js"></script>
+    <script src="/js/vendors/slick/slick.min.js"></script>
+    <script src="/js/vendors/jquery.counterup.min.js"></script>
+    <script src="/js/vendors/waypoints.min.js"></script>
+    <script src="/js/vendors/tweecool.min.js"></script>
+    <script src="/js/vendors/snap.min.js"></script>
+    <script src="/js/vendors/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="/js/vendors/isotope/main.js"></script>
+    <script src="/js/vendors/sticky/jquery.sticky.js"></script>
+    <script src="/js/vendors/sticky/main.js"></script>
+    <!-- Revolution Slider -->
+    <script type='text/javascript' src='/js/revolution/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='/js/revolution/js/jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='/js/revolution/js/jquery.themepunch.essential.min.js'></script>
+    <script type='text/javascript' src='/js/revolution/js/extensions/jquery.themepunch.essential.min.js'></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/main.js"></script>
+    <!-- Video BG -->
+    <script src="/js/vendors/ytplayer.min.js"></script>
+    <script>
+        function openDonate() {
+            //var text = $(".modal-title").html() != "تبرع الان" ? $(".modal-title").html() : "";
+            if ($("#txtDonate").val() != 0 && $("#txtDonate").val() != "") {
+                $("#donate-modal").modal('hide');
+                window.open('/Home/Payment?id=' + $("#txtDonate").val() + '&str=' + $("#donate-modal").find('.modal-title-hidden').html(), "_self");
+            }
+            else {
+                alert("الرجاء ادخال مبلغ التبرع")
+            }
+        }
+        function openModal(xthis) {
+            var text = $(xthis).attr("data-text") || "";
+            if (text != "")
+                $("#donate-modal").find('.modal-title-hidden').html(text);
+            else {
+                $("#donate-modal").find('.modal-title-hidden').html("0");
+            }
+            $("#txtDonate").val(1);
+            $('#donate-modal').modal('show'); return false;
+        }
+        $(function () {
+            if ($('body').hasClass('snapjs-left')) {
+                $(".snap-drawer-left").show();
+            }
+            else {
+                $(".snap-drawer-left").hide();
+            }
+        })
+        $(document).click(function (e) {
+            //do something
+            //var x = e.pageX - e.target.offsetLeft;
+            //alert(x);
+            if ($('body').hasClass('snapjs-left')) {
+                $(".snap-drawer-left").show();
+            }
+            else {
+                $(".snap-drawer-left").hide();
+            }
+        });
+        function callx() {
+            if ($('body').hasClass('snapjs-left')) {
+                $(".snap-drawer-left").show();
+            }
+            else {
+                $(".snap-drawer-left").hide();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@model FikrGroupCms.Models.ViewModel
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+<div class="title_internal_page" style="background:#FFF !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 content-head style2 text-center col-lg-offset-2 col-lg-8 col-md-12">
+                <h2>about</h2>
+                <h1>about us</h1>
+                @*<p>Polygon is the brilliant high techno WordPress theme. You will not.
+            *@</div>
+        </div>
+    </div>
+</div>
+<!-- // HEADER -->
+<div id="content" class="site-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="content-head">
+                    <h1>@Model.AboutTB.FirstOrDefault(x => x.SectionId == 1).EnTitle</h1>
+                    <p>@Html.Raw(Model.AboutTB.FirstOrDefault(x => x.SectionId == 1).EnDescription)</p>
+                </div>
+                <div class="space-bottom-40"></div>
+                @*<h4 class="custom-head">WHY CHOOSE US</h4>*@
+                <div class="row">
+                    <div class="pic_abou">
+                        <img src="@Model.AboutTB.FirstOrDefault(x=> x.SectionId == 1).Image" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="space-bottom-35"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="list_about_00">
+                    <ul>
+                        @foreach (var item in Model.AboutTB.Where(x => x.SectionId == 2))
+                        {
+                            <li>
+                                <span class="icon_about">
+                                    <i class="fa @item.Icon"></i>
+                                </span>
+                                <div class="text_about_p">
+                                    <h3>@item.EnTitle</h3>
+                                    <p>@Html.Raw(item.EnDescription)</p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- **************** blue ***************** -->
+<div class="cta-blue">
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40a7c50cf1b24898945da19b16b29cfb" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="PersonalityDBModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AboutTB" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AdvertismentTB" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="PersonalityDBModel.ConsultantTB" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.ContactsTB" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.IndexTB" Width="1.5" PointX="5.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.JobsTB" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.LayoutTB" Width="1.5" PointX="9.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.NewsTB" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.ProductsTB" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="PersonalityDBModel.Service" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PersonalityDBModel.TypeTB" Width="1.5" PointX="0.75" PointY="8.125" />
+        <AssociationConnector Association="PersonalityDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PersonalityDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PersonalityDBModel.FK_ProductsTB_TypeTB" />
+        <AssociationConnector Association="PersonalityDBModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

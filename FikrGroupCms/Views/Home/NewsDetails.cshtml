@@ -1,0 +1,52 @@
+﻿@model EF.NewsTB
+@{
+    ViewBag.Title = "NewsDetails";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+<!-- title_page -->
+<div class="title_internal_page" style="background:#FFF !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 content-head style2 text-center col-lg-offset-2 col-lg-8 col-md-12">
+                <h2>details</h2>
+                <h1>title the article</h1>
+                @*<p>Polygon is the brilliant high techno WordPress theme. You will not.
+                *@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content" class="site-content container single-post">
+    <div class="content">
+        <article class="post type-post blog-entry">
+            <div class="blog-entry-content">
+                <div class="post-thumb">
+                    <a href="#"><img width="770" height="100" src="@Model.Image" class="img-responsive" alt=""></a>
+                </div>
+                <div class="blog-entry-meta">
+                    <span class="categories-links">
+                        <i class="fa fa-clock-o"></i>
+                        @Model.Date.Value.ToString("MMMM dd yyyy")
+                    </span>
+                    <span class="author vcard"><i class="fa fa-user"></i> admin</span>
+                    @*<span class="categories-links"><i class="fa fa-folder-open"></i><a href="./blog.html">Anything</a>, <a href="./blog.html">Business</a> </span>
+                        <span class="comments-counts"><i class="fa fa-comment"></i>3 Comments</span>
+                        <span><a href="#" class="jm-post-like" data-post_id="393" title="Like"><i id="icon-unlike" class="icon-unlike"></i>&nbsp;4 Likes</a></span>*@
+                </div>
+                <hr>
+                <h3 class="blog-entry-title">@Model.EnTitle</h3>
+                <div class="blog-entry-content">
+                    <p>
+                        @Html.Raw(Model.EnDescription)
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- **************** blue ***************** -->
+<div class="cta-blue">
+</div>
+

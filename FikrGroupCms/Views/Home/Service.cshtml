@@ -1,0 +1,52 @@
+﻿@model FikrGroupCms.Models.ViewModel
+@{
+    ViewBag.Title = "Service";
+    Layout = "~/Views/Shared/_Master.cshtml";
+}
+
+<div class="title_internal_page" style="background:#FFF !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 content-head style2 text-center col-lg-offset-2 col-lg-8 col-md-12">
+                <h2>service</h2>
+                <h1>Our service</h1>
+                @*<p>Polygon is the brilliant high techno WordPress theme. You will not.
+            *@</div>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="container">
+        <div class="row md-reset-border surjithctly-icon-type3 ">
+@foreach (var item in Model.AboutTB.Where(x => x.SectionId == 2))
+{
+            <div class="col-sm-4 text-center">
+                <div class="vc_icon_element vc_icon_element-align-center">
+                    <div class="vc_icon_element-inner"><span class="fa @item.Icon"></span></div>
+                </div>
+                <h4>@item.EnTitle</h4>
+                <p style="text-align: center;">@Html.Raw(item.EnDescription)</p>
+            </div>
+}
+            @*<div class="col-sm-4 text-center">
+                <div class="vc_icon_element vc_icon_element-align-center">
+                    <div class="vc_icon_element-inner"><span class="vc_icon_element-icon pe-7s-target"></span></div>
+                </div>
+                <h4>Logo Design</h4>
+                <p style="text-align: center;">The European languages are members of the same family. The languages only differ in their grammar their pronunciation and.</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="vc_icon_element vc_icon_element-align-center">
+                    <div class="vc_icon_element-inner"><span class="vc_icon_element-icon pe-7s-wristwatch"></span></div>
+                </div>
+                <h4>Web Designas</h4>
+                <p style="text-align: center;">The European languages are members of the same family. The languages only differ in their grammar their pronunciation and.</p>
+            </div>*@
+        </div>
+        @*<hr class="dd">*@
+    </div>
+</div>
+<!-- **************** blue ***************** -->
+<div class="cta-blue">
+</div>
+

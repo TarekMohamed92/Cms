@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="personality - A fully responsive, HTML5 based admin theme">
+    <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, 4ksa, web design, CSS3">
+    <title>لوحة التحكم </title>
+    <!-- Site favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <!-- /site favicon -->
+    <!-- Entypo font stylesheet -->
+    <link href="/admin/css/entypo.css" rel="stylesheet">
+    <!-- /entypo font stylesheet -->
+    <!-- Font awesome stylesheet -->
+    <link href="/admin/css/font-awesome.min.css" rel="stylesheet">
+    <!-- /font awesome stylesheet -->
+    <!-- Bootstrap stylesheet min version -->
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- /bootstrap stylesheet min version -->
+    <!-- 4ksa core stylesheet -->
+    <link href="/admin/css/4ksa-core.css" rel="stylesheet">
+    <!-- /4ksa core stylesheet -->
+
+    <link href="/admin/css/plugins/select2/select2.css" rel="stylesheet">
+
+    <link href="/admin/css/4ksa-forms.css" rel="stylesheet">
+
+    <!-- Bootstrap RTL stylesheet min version -->
+    <link href="/admin/css/bootstrap-rtl.min.css" rel="stylesheet">
+    <!-- /bootstrap rtl stylesheet min version -->
+    <!-- 4ksa RTL core stylesheet -->
+    <link href="/admin/css/4ksa-rtl-core.css" rel="stylesheet">
+    <link href="/admin/ajax/jquery.gritter.css" rel="stylesheet" />
+    <link href="/admin/css/droid-arabic-kufi.css" rel="stylesheet" />
+    <style>
+        :not(i) {
+            font-family: 'DroidSansArabic' !important;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <!-- /4ksa rtl core stylesheet -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+          <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <div class="page-sidebar">
+
+            <!-- Site header  -->
+            <header class="site-header">
+                <div class="site-logo"><a href="#"><img  src="~/images/logo-footer.png" style="height:50px;" /></a></div>
+                <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+                <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+            </header>
+            <!-- /site header -->
+            <!-- Main navigation -->
+            <!-- Main navigation -->
+            <ul id="side-nav" class="main-menu navbar-collapse collapse">
+                @*<li class="has-sub">
+                    <a href="#"><i class="icon-folder"></i><span class="title">الاطار العام</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/Static/index"><span class="title">النص الثابت</span></a></li>*@
+                        @*<li><a href="/Header/index"><span class="title">(روابط (الفوتر</span></a></li>*@
+                        @*<li><a href="/Footer/index"><span class="title">الفوتر</span></a></li>*@
+                    @*</ul>
+                </li>*@
+                <li class="has-sub ">
+                    <a href="index.html"><i class="icon-gauge"></i><span class="title">الصفحة الرئيسية</span></a>
+                    <ul class="nav">
+                        <li><a href="/slider/index"><span class="title">سلايدر</span></a></li>
+                        @*<li><a href="/about/section"><span class="title">عن فكر جروب</span></a></li>*@
+                        @*<li><a href="/latest/index"><span class="title">أحداث</span></a></li>*@
+                    </ul>
+                </li>
+                <li class="has-sub ">
+                    <a href="index.html"><i class="fa fa-picture-o"></i><span class="title">الصور والفيديوهات</span></a>
+                    <ul class="nav">
+                        @*<li><a href="/slider/index"><span class="title">سلايدر</span></a></li>*@
+                        @*<li><a href="/about/section"><span class="title">عن فكر جروب</span></a></li>*@
+                        <li><a href="/latest/index"><span class="title">الصور</span></a></li>
+                        <li><a href="/latest2/index"><span class="title">الفيديو</span></a></li>
+                    </ul>
+                </li>
+                @*<li class="has-sub">
+            <a href="panels.html"><i class="fa fa-book"></i><span class="title">الدورات</span></a>
+            <ul class="nav collapse">
+                <li><a href="/product/index"><span class="title">الدورات</span></a></li>
+            </ul>
+        </li>*@
+                @*<li class="has-sub">
+            <a href="panels.html"><i class="fa fa-users "></i><span class="title">عن الشركة</span></a>
+            <ul class="nav collapse">
+                <li><a href="/news/index"><span class="title">الاستشارات</span></a></li>
+            </ul>
+        </li>*@
+                <li class="has-sub">
+                    <a href="panels.html"><i class="fa fa-address-book"></i><span class="title">من نحن</span></a>
+                    <ul class="nav collapse">
+                        @*<li><a href="/jobs/index"><span class="title">فريق العمل</span></a></li>*@
+                        <li><a href="/about/AboutCompany"><span class="title">من نحن</span></a></li>
+                        <li><a href="/about/index"><span class="title">رسالتنا</span></a></li>
+                        @*<li><a href="/about/section"><span class="title">قطعة نصية</span></a></li>*@
+                    </ul>
+                </li>
+                @*<li class="has-sub">
+        <a href="collapsed-sidebar.html"><i class="fa fa-users"></i><span class="title">عملائنا</span></a>
+        <ul class="nav collapse">
+            <li><a href="/latest/index"><span class="title">عملائنا</span></a></li>*@
+                @*<li><a href="/about/index"><span class="title">عن الشركة</span></a></li>*@
+                @*<li><a href="/about/section"><span class="title">قطعة نصية</span></a></li>*@
+                @*</ul>
+        </li>*@
+                <li class="has-sub">
+                    <a href="collapsed-sidebar.html"><i class="fa fa-archive "></i><span class="title">المشاريع</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/product/index"><span class="title">المشاريع</span></a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="collapsed-sidebar.html"><i class="fa fa-money "></i><span class="title">الميزانيات</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/Budget/index"><span class="title">الميزانيات</span></a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="#"><i class="fa fa-rss-square"></i><span class="title">الفاعليات</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/news/index"><span class="title">الفاعليات</span></a></li>
+                    </ul>
+                </li>
+                @*<li class="has-sub">
+                    <a href="#"><i class="fa fa-sort-alpha-asc "></i><span class="title">ارقام فكر جروب</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/service/index"><span class="title">الارقام</span></a></li>
+                    </ul>
+                </li>*@
+                <li class="has-sub">
+                    <a href="#"><i class="fa fa-envelope"></i><span class="title">اتصل بنا</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="/Footer/Index"><span class="title"> بيانات اتصل بنا</span></a></li>
+                        <li><a href="/Social/Index"><span class="title">وسائل التواصل </span></a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- /main navigation -->
+            @*<ul id="side-nav" class="main-menu navbar-collapse collapse">
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "home" )
+                    {
+                        <li class="active"><a href="/Home/Index"><i class="icon-gauge"></i><span class="title"> الرئيسية </span> </a></li>
+                    }
+                    else
+                    {
+                        <li ><a href="/Home/Index"><i class="icon-gauge"></i><span class="title"> الرئيسية </span> </a></li>
+
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "category")
+                    {
+                        <li class="active"><a href="/Category/Index"><i class="icon-layout"></i><span class="title"> الاقسام </span> </a></li>
+
+                    }
+                    else
+                    {
+                        <li><a href="/Category/Index"><i class="icon-layout"></i><span class="title"> الاقسام </span> </a></li>
+
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "app" && Request.RawUrl.Contains("=0") == true)
+                    {
+                        <li class="active"><a href="/App/Index?app=0"><i class="fa fa-server  "></i><span class="title"> الاعلانات </span> </a></li>
+
+                    }
+                    else
+                    {
+                        <li><a href="/App/Index?app=0"><i class="fa fa-server "></i><span class="title"> الاعلانات </span> </a></li>
+
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "app" && Request.RawUrl.Contains("=1") == true)
+                    {
+                        <li class="active"><a href="/App/Index?app=1"><i class="fa fa-times-circle "></i><span class="title">  الاعلانات المسيئة </span> </a></li>
+
+                    }
+                    else
+                    {
+                        <li><a href="/App/Index?app=1"><i class="fa fa-times-circle  "></i><span class="title"> الاعلانات المسيئة </span> </a></li>
+
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "offers")
+                    {
+                        <li class="active"><a href="/offers/Index"><i class="fa fa-tags"></i><span class="title">  العروض وعروض اليوم </span> </a></li>
+
+                    }
+                    else
+                    {
+                        <li><a href="/offers/Index"><i class="fa fa-tags"></i><span class="title"> العروض وعروض اليوم </span> </a></li>
+
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "advertise")
+                    {
+                        <li class="active"><a href="/Advertise/Index"><i class="fa fa-picture-o"></i><span class="title"> البنرات </span> </a></li>
+
+                    }
+                    else
+                    {
+                        <li><a href="/Advertise/Index"><i class="fa fa-picture-o"></i><span class="title"> البنرات </span> </a></li>
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "user")
+                    {
+                        <li class="active"><a href="/User/Index"><i class="fa fa-users"></i><span class="title"> المستخدمين </span> </a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/User/Index"><i class="fa fa-users"></i><span class="title"> المستخدمين </span> </a></li>
+                    }
+                    @if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower() == "notification")
+                    {
+                        <li class="active"><a href="/Notification/Index"><i class="fa fa-bell-o"></i><span class="title"> الاشعارات </span> </a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Notification/Index"><i class="fa fa-bell-o"></i><span class="title"> الاشعارات </span> </a></li>
+                    }
+
+                </ul>*@
+            <!-- /main navigation -->
+        </div>
+        <!-- /page sidebar -->
+        <!-- Main container -->
+        <div class="main-container">
+
+            <!-- Main header -->
+            <div class="main-header row gray-bg">
+                <div class="col-sm-6 col-xs-7">
+
+                    <!-- User info -->
+                    <ul class="user-info pull-left">
+                        <li class="profile-info dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="/admin/img/profile.png">Admin <span class="caret"></span></a>
+                            <!-- User action menu -->
+                            <ul class="dropdown-menu">
+                                @*<li><a href="#/"><i class="icon-user"></i>My profile</a></li>
+                                    <li><a href="#/"><i class="icon-mail"></i>Messages</a></li>
+                                    <li><a href="#"><i class="icon-clipboard"></i>Tasks</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="icon-cog"></i>Account settings</a></li>*@
+                                <li><a href="/Account/LogOff"><i class="icon-logout"></i>Logout</a></li>
+                            </ul>
+                            <!-- /user action menu -->
+
+                        </li>
+                    </ul>
+                    <!-- /user info -->
+
+                </div>
+
+                <div class="col-sm-6 col-xs-5">
+                    <div class="pull-right">
+                        <!-- User alerts -->
+                        @*<ul class="user-info pull-left">
+
+                                <!-- Notifications -->
+                                <li class="notifications dropdown">
+                                    <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-attention"></i><span class="badge badge-info">6</span></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li class="first">
+                                            <div class="small"><a class="pull-right danger" href="#">Mark all Read</a> You have <strong>3</strong> new notifications.</div>
+                                        </li>
+                                        <li>
+                                            <ul class="dropdown-list">
+                                                <li class="unread notification-success"><a href="#"><i class="icon-user-add pull-right"></i><span class="block-line strong">New user registered</span><span class="block-line small">30 seconds ago</span></a></li>
+                                                <li class="unread notification-secondary"><a href="#"><i class="icon-heart pull-right"></i><span class="block-line strong">Someone special liked this</span><span class="block-line small">60 seconds ago</span></a></li>
+                                                <li class="unread notification-primary"><a href="#"><i class="icon-user pull-right"></i><span class="block-line strong">Privacy settings have been changed</span><span class="block-line small">2 hours ago</span></a></li>
+                                                <li class="notification-danger"><a href="#"><i class="icon-cancel-circled pull-right"></i><span class="block-line strong">Someone special liked this</span><span class="block-line small">60 seconds ago</span></a></li>
+                                                <li class="notification-info"><a href="#"><i class="icon-info pull-right"></i><span class="block-line strong">Someone special liked this</span><span class="block-line small">60 seconds ago</span></a></li>
+                                                <li class="notification-warning"><a href="#"><i class="icon-rss pull-right"></i><span class="block-line strong">Someone special liked this</span><span class="block-line small">60 seconds ago</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="external-last"> <a href="#" class="danger">View all notifications</a> </li>
+                                    </ul>
+                                </li>
+                                <!-- /notifications -->
+                                <!-- Messages -->
+                                <li class="notifications dropdown">
+                                    <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-mail"></i><span class="badge badge-secondary">12</span></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li class="first">
+                                            <div class="dropdown-content-header"><i class="fa fa-pencil-square-o pull-right"></i> Messages</div>
+                                        </li>
+                                        <li>
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <div class="media-left"><img alt="" class="img-circle img-sm" src="images/domnic-brown.png"></div>
+                                                    <div class="media-body">
+                                                        <a class="media-heading" href="#">
+                                                            <span class="text-semibold">Domnic Brown</span>
+                                                            <span class="media-annotation pull-right">Tue</span>
+                                                        </a>
+                                                        <span class="text-muted">Your product sounds interesting I would love to check this ne...</span>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left"><img alt="" class="img-circle img-sm" src="images/john-smith.png"></div>
+                                                    <div class="media-body">
+                                                        <a class="media-heading" href="#">
+                                                            <span class="text-semibold">John Smith</span>
+                                                            <span class="media-annotation pull-right">12:30</span>
+                                                        </a>
+                                                        <span class="text-muted">Thank you for posting such a wonderful content. The writing was outstanding...</span>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left"><img alt="" class="img-circle img-sm" src="images/stella-johnson.png"></div>
+                                                    <div class="media-body">
+                                                        <a class="media-heading" href="#">
+                                                            <span class="text-semibold">Stella Johnson</span>
+                                                            <span class="media-annotation pull-right">2 days ago</span>
+                                                        </a>
+                                                        <span class="text-muted">Thank you for trusting us to be your source for top quality sporting goods...</span>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left"><img alt="" class="img-circle img-sm" src="images/alex-dolgove.png"></div>
+                                                    <div class="media-body">
+                                                        <a class="media-heading" href="#">
+                                                            <span class="text-semibold">Alex Dolgove</span>
+                                                            <span class="media-annotation pull-right">10:45</span>
+                                                        </a>
+                                                        <span class="text-muted">After our Friday meeting I was thinking about our business relationship and how fortunate...</span>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="media-left"><img alt="" class="img-circle img-sm" src="images/domnic-brown.png"></div>
+                                                    <div class="media-body">
+                                                        <a class="media-heading" href="#">
+                                                            <span class="text-semibold">Domnic Brown</span>
+                                                            <span class="media-annotation pull-right">4:00</span>
+                                                        </a>
+                                                        <span class="text-muted">I would like to take this opportunity to thank you for your cooperation in recently completing...</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="external-last"> <a class="danger" href="#">All Messages</a> </li>
+                                    </ul>
+                                </li>
+                                <!-- /messages -->
+
+                            </ul>*@
+                        <!-- /user alerts -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /main header -->
+            <!-- Main content -->
+            <div class="main-content">
+                @RenderBody()
+                <!-- Footer -->
+                <footer class="footer-main" style="  position: absolute;bottom:0px !important;width:95%">
+                    &copy; 2017 <strong>Personality</strong> Admin Theme by <a target="_blank" href="#/">Fikr</a>
+                </footer>
+                <!-- /footer -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /main container -->
+
+    </div>
+
+    <!--Load JQuery-->
+    <script src="/admin/js/jquery.min.js"></script>
+    <script src="/admin/js/bootstrap.min.js"></script>
+    <script src="/admin/js/plugins/metismenu/jquery.metisMenu.js"></script>
+    <!-- Select2-->
+    <script src="/admin/js/plugins/select2/select2.full.min.js"></script>
+    <script src="/admin/js/functions.js"></script>
+    <script src="/admin/ajax/jquery.gritter.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/HtmlEditor/nicEdit.js")"></script>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        //<![CDATA[
+        bkLib.onDomLoaded(function () { nicEditors.allTextAreas() });
+        //]]>
+        //bkLib.onDomLoaded(function () {
+        //    nicEditors.editors.push(
+        //        new nicEditor().panelInstance(
+        //            document.getElementById('myNicEditor')
+        //        )
+        //    );
+        //});
+
+    </script>
+</body>
+</html>

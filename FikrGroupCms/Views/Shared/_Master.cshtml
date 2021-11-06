@@ -1,0 +1,374 @@
+﻿@using EF;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home - Fiker Group</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./icon_s.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/prettyphoto.css">
+    <link rel="stylesheet" href="/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/js/vendors/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="/js/vendors/slick/slick.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Revslider CSS -->
+    <link rel='stylesheet' href="/js/revolution/css/settings.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution/css/layers.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution/css/navigation.css" type="text/css">
+    <link rel='stylesheet' href="/js/revolution/css/settings2.css" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond./js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        #returnmessage {
+            font-size: 14px;
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="header01 header03 header-center header-sticky">
+    <!-- ****************** MOBILE MENU ******************* -->
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <div class="mobile-menu">
+                <ul id="mobile-menu" class="menu">
+                    <li class="menu-item ">
+                        <a href="/Home/Index">Home</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/Home/About">About us</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/Home/Service">Our service</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/Home/Works">Our Works</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/Home/News">Blog</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/Home/Contact">Contact us</a><i class="sub-menu-toggle fa fa-angle-down"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // END MOBILE MENU -->
+    <div class="wrapper" id="wrapper">
+        <!-- ****************** HEADER ******************* -->
+        @if (ViewBag.Page != null && ViewBag.Page.ToLower() == "index")
+        {
+            <header class="no-bg">
+                <div class="container container-full">
+                    <div class="row">
+                        <div class="col-xs-10 hidden-md hidden-lg mob-head-logo2">
+                            <a href="#"><img src="/images/logo-footer.png" class="img-responsive" alt="" /></a>
+                        </div>
+                        <div class="col-xs-2 hidden-md hidden-lg">
+                            <i id="open-left" class="fa fa-navicon"></i>
+                        </div>
+                        <div class="col-md-12 hidden-xs hidden-sm">
+                            <nav id="site-navigation" class="main-navigation hidden-xs hidden-sm menu-center">
+                                <div>
+                                    <div class="search-cart hidden-xs hidden-sm pull-right">
+                                        <div class="search-box">
+                                            <form class="search-form">
+                                                <label>
+                                                    <span class="screen-reader-text">Search for:</span>
+                                                    <input type="search" class="search-field" placeholder="Search ..." value="">
+                                                </label>
+                                                <input type="submit" class="search-submit" value="Search">
+                                            </form>
+                                            <i class="pe-7s-search"></i>
+                                        </div>
+                                    </div>
+                                    <div class="primary-menu pull-right">
+                                        <ul id="primary-menu" class="menu">
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="/Home/Index">Home</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/About">About us</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/Service">Our Service</a>
+                                            </li>
+                                            <li class="menu-item bg_lo">
+                                                <a href="#" class="center-logo"><img src="/images/logo-footer.png" alt="" /></a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/Works">Our Works</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/News">Blog</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="/Home/Contact">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        }
+        else
+        {
+            <div class="clearfix"></div>
+            <header class="internal_pp internal_abo no-bg" style="background: url(/images/about.jpg)no-repeat;">
+                <div class="container container-full">
+                    <div class="row">
+                        <div class="col-xs-10 hidden-md hidden-lg mob-head-logo2">
+                            <a href="#"><img src="/images/logo-footer.png" class="img-responsive" alt="" /></a>
+                        </div>
+                        <div class="col-xs-2 hidden-md hidden-lg">
+                            <i id="open-left" class="fa fa-navicon"></i>
+                        </div>
+                        <div class="col-md-12 hidden-xs hidden-sm">
+                            <nav id="site-navigation" class="main-navigation hidden-xs hidden-sm menu-center">
+                                <div>
+                                    <div class="search-cart hidden-xs hidden-sm pull-right">
+                                        <div class="search-box">
+                                            <form class="search-form">
+                                                <label>
+                                                    <span class="screen-reader-text">Search for:</span>
+                                                    <input type="search" class="search-field" placeholder="Search ..." value="">
+                                                </label>
+                                                <input type="submit" class="search-submit" value="Search">
+                                            </form>
+                                            <i class="pe-7s-search"></i>
+                                        </div>
+                                    </div>
+                                    <div class="primary-menu pull-right">
+                                        <ul id="primary-menu" class="menu">
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="/Home/Index">Home</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/About">About us</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/Service">Our Service</a>
+                                            </li>
+                                            <li class="menu-item bg_lo">
+                                                <a href="#" class="center-logo"><img src="/images/logo-footer.png" alt="" /></a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/Works">Our Works</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children mega-menu">
+                                                <a href="/Home/News">Blog</a>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="/Home/Contact">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        }
+
+
+        <div>
+            @RenderBody()
+        </div>
+        <!-- ****************** CTA ******************* -->
+        <div class="cta-blue">
+        </div>
+        <!-- ****************** FOOTER ******************* -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget">
+                            <p><img src="/images/logo-footer.png" alt=""></p>
+                            <p>@((ViewBag.MasterAbouts as List<AboutTB>).FirstOrDefault(i => i.SectionId == 1).EnDescription)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget footer-contact">
+                            <h5>Contact</h5>
+                            @*<p><span class="pe-7s-call"></span></p>
+                                <p><span class="pe-7s-mail-open-file"></span>info@yourwebsite.com</p>
+                                <p><span class="pe-7s-map-2"></span>No.200 Joseph, Canada 10020</p>
+                                <p><span class="pe-7s-print"></span>(61 2) 9200 5700</p>*@
+                            <p><span class="pe-7s-call"></span> @((ViewBag.MasterContact as List<ContactsTB>).FirstOrDefault(i => i.SectionId == 3).ArTitle)</p>
+                            <p><span class="pe-7s-mail-open-file"></span>@((ViewBag.MasterContact as List<ContactsTB>).FirstOrDefault(i => i.SectionId == 1).ArTitle)</p>
+                            <p><span class="pe-7s-map-2"></span>@((ViewBag.MasterContact as List<ContactsTB>).FirstOrDefault(i => i.SectionId == 2).ArTitle)</p>
+                            <p><span class="pe-7s-print"></span>@((ViewBag.MasterContact as List<ContactsTB>).FirstOrDefault(i => i.SectionId == 4).ArTitle)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget">
+                            <h5>Recent Projects</h5>
+                            <ul class="fprojects">
+                                @foreach (var item in (ViewBag.MasterImages as List<ProductsTB>))
+                                {
+                                    <li>
+                                        <div>
+                                            <a href="@item.Image" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="@item.Image" class="img-responsive" alt="" style="height:108px;width:108px;" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                }
+
+                                @*<li>
+                                        <div>
+                                            <a href="images/20.jpg" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="images/20.jpg" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="images/20.jpg" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="images/20.jpg" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="images/20.jpg" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="images/20.jpg" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="images/20.jpg" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="images/20.jpg" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="images/20.jpg" class="prettyPhoto">
+                                                <div class="fp-overlay"><i class="fa fa-mail-forward"></i></div>
+                                                <img src="images/20.jpg" class="img-responsive" alt="" />
+                                            </a>
+                                        </div>
+                                    </li>*@
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget">
+                            <h5>News</h5>
+                            <ul class="fnews">
+                                @foreach (var item in (ViewBag.MasterNews as List<NewsTB>))
+                                {
+                                    <li>
+                                        <a href="/Home/NewsDetails?id=@item.Id">@item.EnTitle</a>
+                                    </li>
+                                }
+
+                                @*<li>
+                                        <a href="./blog.html">How To Choose The Best Theme For My Business?</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html">What make a brand success?</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html">New design trends</a>
+                                    </li>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // FOOTER -->
+        <!-- **************** COPYRIGHT ***************** -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-5 left">
+                        <ul class="menu-social-small">
+                            @foreach (var item in (ViewBag.MasterSocial as List<LayoutTB>))
+                            {
+                                <li><a href="@item.Link"><i class="fa @item.Icon"></i></a></li>
+                            }
+                            @*<li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="http://instagram.com"><i class="fa fa-instagram"></i></a></li>*@
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-7 right">
+                        &copy; All rights reserved to Fikra Group 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // COPYRIGHT -->
+    </div>
+    <a class="scrollup" title="Go to top"><i class="fa fa-angle-up"></i></a>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/js/vendors/easypie/jquery.easypiechart.min.js"></script>
+    <script src="/js/vendors/slick/slick.min.js"></script>
+    <script src="/js/vendors/jquery.counterup.min.js"></script>
+    <script src="/js/vendors/waypoints.min.js"></script>
+    <script src="/js/vendors/tweecool.min.js"></script>
+    <script src="/js/vendors/snap.min.js"></script>
+    <script src="/js/vendors/jquery.prettyPhoto.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="/js/vendors/isotope/main.js"></script>
+    <!-- Revolution Slider -->
+    <script type='text/javascript' src='/js/revolution/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='/js/revolution/js/jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='/js/revolution/js/extensions/jquery.themepunch.essential.min.js'></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="/js/revolution/main.js"></script>
+    <script src="/js/vendors/sticky/jquery.sticky.js"></script>
+    <script src="/js/vendors/sticky/main.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
